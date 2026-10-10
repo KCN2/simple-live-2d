@@ -1,0 +1,101 @@
+{
+	"breathing_amplitude": 0.85,
+	"breathing_speed": 0.9,
+	"freeform_mask_base64": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAtdJREFUeJzt3buK1FAAh/EvM4uOs+uFxcsyeFlvlWDlK1hqaaeNreCz+AaWdoKNtb2N4AtYKAjeEVZdTSxOhhl26iTL/L8fHJhNk7D5zknONFMBDYo1GvoCNCwDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQLiNoS9A/dtoxwQDiFEBR4BN4DiwDcwwgAgjYIty03coN34XuIIBrL0RZcafY3HTLwNXgUsYwNqbAKeA88A14Drl5u8CZ3AXsNYq4ChwEjjNYvnfoTwOtjCAtTYCxpQIpu3YBI5RXgjHGMBaa4B/wF/gD7Df/j0fNQbQqbOUf3LTjhrYA+5Qlueu1cBv4AfwBfjUjm/tsT18CezUVxazrGrHBHhBmY2PgKeU2dmVX8BnytI/pTwOqva69tvP/mZQD54B91id+T+Bl8ADys3qwpiyFZxRtn7zreAFDKB374CLB441wFvgFt2tBvPVZ5vyaJpRtoYGMIA3wM0Dx2rKc/k28LrDcy9/JXyiPdY4+h9PoKmhaZZGDc3znq/DXcBAHgP3YWX5/dDzdfgIGNh3FktxTXlh65MrwMDuspiBFasviF0zgIG9onwrByWAhz2f3wAOgY9Ln6c9n9t3gEPiBuUr2vc9n9cAwvkICGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCGcA4QwgnAGEM4BwBhDOAMIZQDgDCPcfNyDJ3VmNqoMAAAAASUVORK5CYII=",
+	"freeform_mask_enabled": true,
+	"ghost_suppress": 0.85,
+	"layer_composite_enabled": false,
+	"outline_follow_ratio": 0.65,
+	"outline_protect": 0.5,
+	"preset_name": "Default Breathing",
+	"regions": [
+		{
+			"center": {
+				"x": 0.3556,
+				"y": 0.4954
+			},
+			"direction": {
+				"x": 0.0,
+				"y": -1.0
+			},
+			"enabled": true,
+			"falloff": 1.5,
+			"name": "변형 영역 2",
+			"phase_offset": -0.39,
+			"radius": {
+				"x": 0.0889,
+				"y": 0.0517
+			},
+			"scale_strength": 0.04,
+			"spring_weight": 1.85,
+			"strength": 0.0154
+		},
+		{
+			"center": {
+				"x": 0.7007,
+				"y": 0.4533
+			},
+			"direction": {
+				"x": -0.0608,
+				"y": -0.9981
+			},
+			"enabled": true,
+			"falloff": 1.5,
+			"name": "변형 영역 3",
+			"phase_offset": -0.9,
+			"radius": {
+				"x": 0.1089,
+				"y": 0.0693
+			},
+			"scale_strength": 0.04,
+			"spring_weight": 1.8,
+			"strength": 0.0126
+		},
+		{
+			"center": {
+				"x": 0.5208,
+				"y": 0.5507
+			},
+			"direction": {
+				"x": 0.0,
+				"y": -1.0
+			},
+			"enabled": true,
+			"falloff": 1.5,
+			"name": "변형 영역 4",
+			"phase_offset": -1.39,
+			"radius": {
+				"x": 0.4928,
+				"y": 0.3693
+			},
+			"scale_strength": 0.04,
+			"spring_weight": 1.6,
+			"strength": 0.018
+		},
+		{
+			"center": {
+				"x": 0.5183,
+				"y": 0.9193
+			},
+			"direction": {
+				"x": 0.0281,
+				"y": -0.9996
+			},
+			"enabled": true,
+			"falloff": 1.5,
+			"name": "변형 영역 5",
+			"phase_offset": -1.8,
+			"radius": {
+				"x": 0.0773,
+				"y": 0.0794
+			},
+			"scale_strength": 0.04,
+			"spring_weight": 1.8,
+			"strength": 0.0137
+		}
+	],
+	"spring_damping": 7.0,
+	"spring_enabled": true,
+	"spring_stiffness": 165.0,
+	"version": 2
+}

@@ -1,0 +1,194 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://demo/morph_test.gd" id="1_demo_script"]
+[ext_resource type="PackedScene" path="res://addons/character_morph/character_morph_2d.tscn" id="2_morph_scene"]
+
+[node name="MorphTest" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_demo_script")
+
+[node name="RootVBox" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="TopToolbar" type="PanelContainer" parent="RootVBox"]
+z_index = 20
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="ToolbarMargin" type="MarginContainer" parent="RootVBox/TopToolbar"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="ToolbarHBox" type="HBoxContainer" parent="RootVBox/TopToolbar/ToolbarMargin"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MainSplit" type="HSplitContainer" parent="RootVBox"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = -310
+
+[node name="ViewportPanel" type="Control" parent="RootVBox/MainSplit"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CanvasClip" type="Control" parent="RootVBox/MainSplit/ViewportPanel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasBg" type="Control" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StageRoot" type="Node2D" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip"]
+position = Vector2(360, 260)
+
+[node name="OriginalCompareSprite" type="Sprite2D" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip/StageRoot"]
+visible = false
+centered = true
+
+[node name="CharacterMorph2D" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip/StageRoot" instance=ExtResource("2_morph_scene")]
+show_debug_gizmo = true
+
+[node name="CompareLabels" type="Control" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip"]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 38.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="OrigTag" type="Label" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip/CompareLabels"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.25
+anchor_right = 0.25
+offset_left = -80.0
+offset_right = 80.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 13
+text = "◀ 원본 (Original)"
+horizontal_alignment = 1
+
+[node name="MorphTag" type="Label" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip/CompareLabels"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.75
+anchor_right = 0.75
+offset_left = -80.0
+offset_right = 80.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 13
+text = "변형 결과 (Morph) ▶"
+horizontal_alignment = 1
+
+[node name="CursorBadge" type="PanelContainer" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip"]
+visible = false
+z_index = 25
+layout_mode = 0
+mouse_filter = 2
+
+[node name="BadgeLabel" type="Label" parent="RootVBox/MainSplit/ViewportPanel/CanvasClip/CursorBadge"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "드래그하여 조절"
+
+[node name="BottomHintBar" type="PanelContainer" parent="RootVBox/MainSplit/ViewportPanel"]
+z_index = 20
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -34.0
+offset_right = -8.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="HintLabel" type="Label" parent="RootVBox/MainSplit/ViewportPanel/BottomHintBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "💡 원을 드래그해 위치 이동 | 네모 점(■)으로 크기 조절 | 노란 화살표 끝(●)으로 방향·강도 조절"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="RightSidePanel" type="PanelContainer" parent="RootVBox/MainSplit"]
+z_index = 20
+clip_contents = true
+custom_minimum_size = Vector2(295, 0)
+layout_mode = 2
+
+[node name="BottomPlaybackBar" type="PanelContainer" parent="RootVBox"]
+z_index = 20
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+
+[node name="PlaybackMargin" type="MarginContainer" parent="RootVBox/BottomPlaybackBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="PlaybackHBox" type="HBoxContainer" parent="RootVBox/BottomPlaybackBar/PlaybackMargin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ImageFileDialog" type="FileDialog" parent="."]
+title = "캐릭터 이미지 파일 열기"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png, *.jpg, *.jpeg, *.webp, *.svg, *.bmp ; 이미지 파일")
+
+[node name="PresetSaveDialog" type="FileDialog" parent="."]
+title = "CharacterMorph2D 애드온용 프리셋(.json) 저장"
+file_mode = 4
+access = 2
+filters = PackedStringArray("*.json ; CharacterMorph2D 애드온 프리셋 파일")
+
+[node name="PresetLoadDialog" type="FileDialog" parent="."]
+title = "CharacterMorph2D 애드온용 프리셋(.json) 열기"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.json ; CharacterMorph2D 애드온 프리셋 파일")
+
+[node name="GifSaveDialog" type="FileDialog" parent="."]
+title = "움직이는 GIF 애니메이션(.gif)으로 저장"
+file_mode = 4
+access = 2
+filters = PackedStringArray("*.gif ; 움직이는 GIF 이미지 파일")
+

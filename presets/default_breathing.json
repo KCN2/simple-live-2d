@@ -1,0 +1,32 @@
+{
+	"version": 1,
+	"preset_name": "Default Breathing",
+	"breathing_speed": 1.2,
+	"breathing_amplitude": 1.0,
+	"outline_protect": 0.5,
+	"spring_enabled": false,
+	"spring_stiffness": 140.0,
+	"spring_damping": 10.0,
+	"regions": [
+		{
+			"name": "호흡/흉부 영역 1",
+			"enabled": true,
+			"center": {
+				"x": 0.5,
+				"y": 0.48
+			},
+			"radius": {
+				"x": 0.16,
+				"y": 0.14
+			},
+			"direction": {
+				"x": 0.0,
+				"y": -1.0
+			},
+			"strength": 0.018,
+			"scale_strength": 0.04,
+			"falloff": 1.5,
+			"phase_offset": 0.0
+		}
+	]
+}

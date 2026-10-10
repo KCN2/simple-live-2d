@@ -1,0 +1,79 @@
+{
+	"version": 2,
+	"preset_name": "Breathing + Hair/Cloth Sway",
+	"breathing_speed": 1.2,
+	"breathing_amplitude": 1.0,
+	"outline_protect": 0.5,
+	"spring_enabled": true,
+	"spring_stiffness": 140.0,
+	"spring_damping": 9.0,
+	"freeform_mask_enabled": false,
+	"layer_composite_enabled": false,
+	"ghost_suppress": 0.85,
+	"outline_follow_ratio": 0.65,
+	"regions": [
+		{
+			"name": "호흡/흉부 영역",
+			"enabled": true,
+			"center": {
+				"x": 0.5,
+				"y": 0.48
+			},
+			"radius": {
+				"x": 0.16,
+				"y": 0.14
+			},
+			"direction": {
+				"x": 0.0,
+				"y": -1.0
+			},
+			"strength": 0.018,
+			"scale_strength": 0.045,
+			"falloff": 1.5,
+			"phase_offset": 0.0,
+			"spring_weight": 1.0
+		},
+		{
+			"name": "머리카락 흔들림 (우측)",
+			"enabled": true,
+			"center": {
+				"x": 0.68,
+				"y": 0.36
+			},
+			"radius": {
+				"x": 0.12,
+				"y": 0.18
+			},
+			"direction": {
+				"x": 0.7,
+				"y": -0.5
+			},
+			"strength": 0.016,
+			"scale_strength": 0.0,
+			"falloff": 1.6,
+			"phase_offset": -0.8,
+			"spring_weight": 1.45
+		},
+		{
+			"name": "의상 자락 흔들림 (하단)",
+			"enabled": true,
+			"center": {
+				"x": 0.5,
+				"y": 0.76
+			},
+			"radius": {
+				"x": 0.22,
+				"y": 0.14
+			},
+			"direction": {
+				"x": 0.4,
+				"y": -0.6
+			},
+			"strength": 0.015,
+			"scale_strength": 0.02,
+			"falloff": 1.5,
+			"phase_offset": -1.2,
+			"spring_weight": 1.85
+		}
+	]
+}

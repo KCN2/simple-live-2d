@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://addons/character_morph/character_morph_2d.gd" id="1_script"]
+[ext_resource type="Shader" path="res://addons/character_morph/local_morph.gdshader" id="2_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_morph"]
+resource_local_to_scene = true
+shader = ExtResource("2_shader")
+shader_parameter/region_enabled = true
+shader_parameter/region_center = Vector2(0.5, 0.48)
+shader_parameter/region_radius = Vector2(0.16, 0.14)
+shader_parameter/morph_direction = Vector2(0, -1)
+shader_parameter/morph_strength = 0.018
+shader_parameter/scale_strength = 0.04
+shader_parameter/falloff = 1.5
+shader_parameter/phase = 0.0
+shader_parameter/outline_protect = 0.5
+shader_parameter/bypass_morph = false
+shader_parameter/extra_region_count = 0
+shader_parameter/use_freeform_mask = false
+shader_parameter/layer_composite_mode = false
+shader_parameter/ghost_suppress = 0.85
+shader_parameter/outline_follow_ratio = 0.65
+
+[node name="CharacterMorph2D" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_morph")
+centered = true
